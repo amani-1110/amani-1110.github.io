@@ -367,36 +367,6 @@
       }
     }
 
-    /* phone turned sideways */
-    @media (max-width: 950px) and (orientation: landscape) {
-
-      body {
-        background: transparent;
-        position: relative;
-      }
-
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        width: 100vw;
-        height: 100dvh;
-
-        background-image: url("bg1-mobile.png");
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        z-index: 0;
-        pointer-events: none;
-      }
-
-      .page {
-        position: relative;
-        z-index: 1;
-      }
-    }
-
     /* phone turned upright */
     @media (max-width: 720px){
       body{
@@ -405,21 +375,21 @@
       }
 
       body::before{
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
+        content:"";
+        position:fixed;
 
-        width: 100vw;
-        height: 100dvh;
+        top:-2px;
+        right:-2px;
+        bottom:-2px;
+        left:-2px;
 
-        background-image: url("bg1-mobile.png");
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;
+        background-image:url("bg1-mobile.png");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
 
-        z-index: 0;
-        pointer-events: none;
+        z-index:0;
+        pointer-events:none;
       }
 
       .page{
@@ -483,6 +453,33 @@
       .email-text{
         font-size:1rem;
         max-width:270px;
+      }
+    }
+
+    /* phone turned sideways */
+    @media (max-width: 950px) and (orientation: landscape){
+
+      body::before{
+        content:"";
+        position:fixed;
+
+        top:-2px;
+        right:-2px;
+        bottom:-2px;
+        left:-2px;
+
+        background-image:url("bg.png");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+
+        z-index:0;
+        pointer-events:none;
+      }
+
+      .page{
+        position:relative;
+        z-index:1;
       }
     }
 
