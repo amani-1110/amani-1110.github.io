@@ -368,13 +368,21 @@
     }
 
     @media (max-width: 720px){
-      body{
+      body {
+        background: #0b1426;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+
         background-image: url("bg1-mobile.png");
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-color: #0b1426;
       }
 
       .page{
