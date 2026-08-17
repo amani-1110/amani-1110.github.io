@@ -373,9 +373,9 @@
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-attachment: scroll;
+        background-color: #0b1426;
       }
-    }
 
       .page{
         width:min(100% - 20px, 680px);
@@ -436,6 +436,32 @@
       .email-text{
         font-size:1rem;
         max-width:270px;
+      }
+    }
+
+    @media (max-width: 420px){
+      body{
+        font-size:19px;
+      }
+
+      .page{
+        width:calc(100% - 14px);
+      }
+
+      h1{
+        font-size:clamp(1.65rem, 12vw, 2.4rem);
+      }
+
+      .section-title{
+        font-size:.82rem;
+      }
+
+      .chip{
+        font-size:.95rem;
+      }
+
+      .contact-row{
+        flex-direction:column;
       }
     }
 
