@@ -1,341 +1,626 @@
-<!-- Generated with Claude -->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Analytics Portfolio</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amani-Myriam Maamar — Analytics, AI, Optimization and Data Portfolio." />
+  <title>Amani-Myriam Maamar | Portfolio</title>
 
-    <style>
-      /* ============================================================
-       DARK PROFESSIONAL PORTFOLIO — Sidebar Layout
-       ============================================================ */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#101827;
+      --panel:#0b1426;
+      --panel-2:#101c32;
+      --line:#dce8ef;
+      --line-soft:#7398aa;
+      --cyan:#8f55eb;
+      --yellow:#eca438;
+      --purple:#fe71be;
+      --green:#5aaad5;
+      --pink:#ff6f98;
+      --white:#ffffff;
+      --text:#f4f7fb;
+      --muted:#cad5df;
+      --shadow:7px 7px 0 rgba(2,8,20,.45);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:"VT323", monospace;
+      font-size:22px;
+      line-height:1.45;
+      background:
+        linear-gradient(rgba(238,245,242,.20),rgba(238,245,242,.20)),
+        url("bg1.png") center top / cover fixed no-repeat;
+      min-height:100vh;
+    }
+
+    .page{
+      width:min(1460px, calc(100% - 34px));
+      margin:0 auto;
+      padding:58px 0 36px;
+    }
+
+    .hero{
+      text-align:center;
+      min-height:400px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding:24px 20px 36px;
+    }
+    
+
+    h1,h2,h3,.pixel{
+      font-family:"Press Start 2P", monospace;
+    }
+
+    h1{
+      margin:0;
+      max-width:1200px;
+      font-size:clamp(2.6rem, 6vw, 5.3rem);
+      line-height:1.18;
+      letter-spacing:-.045em;
+      color:var(--ink);
+      text-shadow:4px 4px 0 rgba(255,255,255,.5);
+    }
+
+    .hero-desc{
+      max-width:860px;
+      margin:28px auto 0;
+      font-size:1.35rem;
+      font-weight:700;
+      color: #fcfcfc;
+      text-shadow:
+        2px 2px 0 #101827,
+        -1px -1px 0 #101827,
+        1px -1px 0 #101827,
+        -1px 1px 0 #101827;
+    }
+    .hero-desc strong{
+      color: #ffe4a4;
+    }
+
+    .sparkles{
+      margin-top:18px;
+      color:#d89100;
+      font-family:"Press Start 2P", monospace;
+      font-size:1.5rem;      /* bigger */
+      letter-spacing:.45em;
+      text-align:center;     /* centered */
+      width:100%;            /* centers across available space */
+    }
+
+    .top-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .pixel-panel{
+      position:relative;
+      background:#0b1426;
+      color:var(--text);
+      border:3px solid var(--line);
+      box-shadow:var(--shadow);
+      padding:22px 22px 24px;
+      min-width:0;
+    }
+
+    .pixel-panel::before,
+    .pixel-panel::after{
+      content:"";
+      position:absolute;
+      width:12px;
+      height:12px;
+      background:var(--panel);
+    }
+
+    .pixel-panel::before{left:-4px; top:-4px}
+    .pixel-panel::after{right:-4px; bottom:-4px}
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin:0 0 18px;
+      padding-bottom:16px;
+      border-bottom:3px dotted var(--line-soft);
+      color:var(--yellow);
+      font-size:1rem;
+      line-height:1.4;
+    }
+
+    .section-title .icon{
+      width:30px;
+      height:30px;
+      flex:0 0 30px;
+      display:grid;
+      place-items:center;
+      font-size:1.35rem;
+    }
+
+    .about p{
+      margin:0 0 18px;
+    }
+
+    .about p:last-child{margin-bottom:0}
+
+    .skill-group + .skill-group{margin-top:18px}
+
+    .skill-group h3{
+      margin:0 0 10px;
+      color:var(--cyan);
+      font-family:"VT323", monospace;
+      font-size:1.25rem;
+      letter-spacing:.04em;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .chip{
+      border:2px solid var(--line);
+      padding:5px 10px;
+      background:#101a2e;
+      color:var(--text);
+      box-shadow:3px 3px 0 rgba(0,0,0,.25);
+      white-space:nowrap;
+    }
+
+    .interest-list{
+      display:grid;
+      gap:16px;
+      margin-top:6px;
+    }
+
+    .interest{
+      display:grid;
+      grid-template-columns:46px 1fr;
+      gap:12px;
+      align-items:center;
+    }
+
+    .interest-icon{
+      font-size:1.65rem;
+      text-align:center;
+      filter:saturate(1.1);
+    }
+
+    .projects{
+      margin-top:16px;
+    }
+
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .project-card{
+      border:2px solid #58768c;
+      padding:18px;
+      background:#101c32;
+      display:flex;
+      flex-direction:column;
+      min-height:300px;
+      box-shadow:4px 4px 0 rgba(0,0,0,.22);
+    }
+
+    .project-head{
+      display:grid;
+      grid-template-columns:62px 1fr;
+      gap:14px;
+      align-items:center;
+      margin-bottom:12px;
+    }
+
+    .project-icon{
+      width:62px;
+      height:62px;
+      display:grid;
+      place-items:center;
+      border:2px solid currentColor;
+      background:rgba(255,255,255,.04);
+      font-size:2rem;
+    }
+
+    .project-card:nth-child(1) .project-icon{color:var(--cyan)}
+    .project-card:nth-child(2) .project-icon{color:var(--purple)}
+    .project-card:nth-child(3) .project-icon{color:var(--green)}
+
+    .project-card h3{
+      margin:0;
+      font-family:"VT323", monospace;
+      font-size:1.45rem;
+      line-height:1.05;
+    }
+
+    .project-card p{
+      margin:8px 0 18px;
+      color:var(--muted);
+      flex:1;
+    }
+
+    .project-link,
+    .all-projects-link,
+    .icon-button{
+      text-decoration:none;
+      background:var(--white);
+      color:#101827;
+      border:2px solid #d6dce2;
+      box-shadow:4px 4px 0 rgba(0,0,0,.42);
+      transition:transform .12s steps(2), box-shadow .12s steps(2);
+    }
+
+    .project-link{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:8px 12px;
+    }
+
+    .project-link:hover,
+    .all-projects-link:hover,
+    .icon-button:hover{
+      transform:translate(-2px,-2px);
+      box-shadow:6px 6px 0 rgba(0,0,0,.42);
+    }
+
+    .all-projects{
+      text-align:center;
+      margin-top:20px;
+    }
+
+    .all-projects-link{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+    }
+
+    .contact{
+      margin-top:16px;
+    }
+
+    .contact-row{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:34px;
+      flex-wrap:wrap;
+      padding:4px 0 2px;
+    }
+
+    .contact-block{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:8px;
+      min-width:120px;
+    }
+
+    .icon-button{
+      width:66px;
+      height:66px;
+      display:grid;
+      place-items:center;
+      padding:0;
+    }
+
+    .icon-button svg,
+    .project-link svg,
+    .all-projects-link svg{
+      width:28px;
+      height:28px;
+      fill:currentColor;
+    }
+
+    .email-text{
+      color:var(--text);
+      word-break:break-word;
+      text-align:center;
+      font-size:1.15rem;
+    }
+
+    .contact-divider{
+      width:3px;
+      height:76px;
+      background:repeating-linear-gradient(
+        to bottom,
+        var(--line-soft) 0 7px,
+        transparent 7px 13px
+      );
+    }
+
+    @media (max-width: 1050px){
+      .top-grid{
+        grid-template-columns:1fr 1fr;
       }
 
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-        color: #e0e0e0;
-        background: url('bg.jpg') center/cover fixed;
-        background-attachment: fixed;
-        line-height: 1.6;
-        display: flex;
-        min-height: 100vh;
+      .interests{
+        grid-column:1 / -1;
       }
 
-      /* ---------- SIDEBAR ---------- */
-      .sidebar {
-        width: 280px;
-        background: #1a1f2e;
-        padding: 40px 24px;
-        border-right: 1px solid #2a2f3f;
-        position: fixed;
-        height: 100vh;
-        overflow-y: auto;
+      .project-grid{
+        grid-template-columns:1fr;
       }
 
-      /* ---------- MAIN CONTENT ---------- */
-      .main-content {
-        margin-left: 280px;
-        flex: 1;
-        padding: 40px;
+      .project-card{
+        min-height:auto;
+      }
+    }
+
+    @media (max-width: 720px){
+      body{
+        background-attachment:scroll;
+        background-position:center top;
       }
 
-      /* ---------- SIDEBAR PROFILE SECTION ---------- */
-      .profile {
-        text-align: center;
-        margin-bottom: 40px;
-        border-bottom: 1px solid #2a2f3f;
-        padding-bottom: 30px;
+      .page{
+        width:min(100% - 20px, 680px);
+        padding-top:28px;
       }
 
-      .photo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #90E5FF 0%, #70D5FF 100%);
-        border: 2px solid #90E5FF;
-        margin: 0 auto 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #0f1419;
-        font-size: 12px;
-        font-weight: 600;
+      .hero{
+        min-height:330px;
+        padding:10px 8px 26px;
       }
 
-      .profile h1 {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 8px;
-        color: #fff;
-        letter-spacing: -0.5px;
+      h1{
+        font-size:clamp(2rem, 12vw, 3.1rem);
+        line-height:1.22;
+        text-shadow:3px 3px 0 rgba(255,255,255,.48);
       }
 
-      .profile p {
-        font-size: 13px;
-        color: #888;
-        font-weight: 500;
+      .hero-desc{
+        margin-top:22px;
+        font-size:1.08rem;
       }
 
-      /* ---------- SIDEBAR NAVIGATION TABS ---------- */
-      .nav-tabs {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+      .top-grid{
+        grid-template-columns:1fr;
+        gap:12px;
       }
 
-      .tab-button {
-        padding: 12px 16px;
-        border: none;
-        background: transparent;
-        color: #b0b0b0;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 600;
-        border-radius: 6px;
-        text-align: left;
-        transition: all 0.3s ease;
-        border-left: 3px solid transparent;
+      .interests{
+        grid-column:auto;
       }
 
-      .tab-button:hover {
-        background: #262d3f;
-        color: #e0e0e0;
+      .pixel-panel{
+        padding:18px 16px 20px;
+        box-shadow:5px 5px 0 rgba(2,8,20,.42);
       }
 
-      .tab-button.active {
-        background: rgba(144, 229, 255, 0.1);
-        color: #90E5FF;
-        border-left-color: #90E5FF;
+      .project-grid{
+        gap:12px;
       }
 
-      /* ---------- TAB CONTENT ---------- */
-      .tab-content {
-        display: none;
+      .project-head{
+        grid-template-columns:54px 1fr;
       }
 
-      .tab-content.active {
-        display: block;
-        animation: fadeIn 0.3s ease;
+      .project-icon{
+        width:54px;
+        height:54px;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+      .contact-row{
+        gap:20px;
       }
 
-      .panel {
-        background: #1a1f2e;
-        border: 1px solid #2a2f3f;
-        border-radius: 8px;
-        padding: 32px;
-        margin-bottom: 24px;
+      .contact-divider{
+        display:none;
       }
 
-      .panel h2 {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 16px;
-        color: #fff;
+      .email-text{
+        font-size:1rem;
+        max-width:270px;
+      }
+    }
+
+    @media (max-width: 420px){
+      body{font-size:19px}
+
+      .page{
+        width:calc(100% - 14px);
       }
 
-      .panel p {
-        font-size: 15px;
-        color: #c0c0c0;
-        line-height: 1.7;
+      h1{
+        font-size:clamp(1.65rem, 12vw, 2.4rem);
       }
 
-      /* ---------- PROJECT CARDS (2x2 grid) ---------- */
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+      .section-title{
+        font-size:.82rem;
       }
 
-      .card {
-        border: 1px solid #2a2f3f;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #1a1f2e;
-        transition: all 0.3s ease;
+      .chip{
+        font-size:.95rem;
       }
 
-      .card:hover {
-        border-color: #90E5FF;
-        box-shadow: 0 8px 24px rgba(144, 229, 255, 0.15);
-        transform: translateY(-4px);
+      .contact-row{
+        flex-direction:column;
       }
+    }
+  </style>
+</head>
 
-      .card-photo {
-        height: 140px;
-        background: linear-gradient(135deg, #1a1f2e 0%, #262d3f 100%);
-        border-bottom: 1px solid #2a2f3f;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #666;
-        font-size: 12px;
-        font-weight: 500;
-      }
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="name">
+      <h1 id="name">Amani-Myriam<br>Maamar</h1>
+      <p class="hero-desc">
+        <strong>Analytics · AI · Optimization</strong><br><br>
+        Analytical problem solver passionate about turning data into insights and building practical,
+        data-driven solutions. Interested in opportunities across business analytics, data analytics,
+        optimization, operations research and strategic decision-making.
+      </p>
+      <div class="sparkles">˖⊹˖⊹˖⊹˖</div>
+    </section>
+    
+    <section class="top-grid" aria-label="Profile overview">
+      <article class="pixel-panel about">
+        <h2 class="section-title">ABOUT ME</h2>
+        <p>
+          I’m passionate about turning data into insights and building solutions that create impact.
+          My background combines mathematics, statistics and computer science, allowing me to approach
+          problems analytically and creatively.
+        </p>
+        <p>
+          I enjoy working on projects that involve data analysis, machine learning, optimization
+          and database design.
+        </p>
+      </article>
 
-      .card-text {
-        padding: 20px;
-      }
+      <article class="pixel-panel skills">
+        <h2 class="section-title">SKILLS</h2>
 
-      .card-text h3 {
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 8px;
-        color: #fff;
-      }
+        <div class="skill-group">
+          <h3>Programming</h3>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">R</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Java</span>
+            <span class="chip">C++</span>
+            <span class="chip">HTML/CSS/JS</span>
+          </div>
+        </div>
 
-      .card-text p {
-        font-size: 14px;
-        color: #a0a0a0;
-        line-height: 1.6;
-      }
+        <div class="skill-group">
+          <h3>Data & Analytics</h3>
+          <div class="chips">
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">Seaborn</span>
+            <span class="chip">Spark</span>
+          </div>
+        </div>
 
-      /* ---------- MOBILE RESPONSIVE ---------- */
-      @media (max-width: 768px) {
-        body {
-          flex-direction: column;
-        }
+        <div class="skill-group">
+          <h3>Databases & Tools</h3>
+          <div class="chips">
+            <span class="chip">MySQL</span>
+            <span class="chip">Jupyter</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Git</span>
+            <span class="chip">VS Code</span>
+          </div>
+        </div>
+      </article>
 
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-          border-right: none;
-          border-bottom: 1px solid #2a2f3f;
-          padding: 30px 20px;
-        }
+      <article class="pixel-panel interests">
+        <h2 class="section-title">INTERESTS</h2>
+        <div class="interest-list">
+          <div>⊹ Analytics & AI</div>
+          <div>⊹ Optimization & Operations Research</div>
+          <div>⊹ Logistics</div>
+          <div>⊹ Supply Chain Management</div>
+          <div>⊹ Strategic Planning</div>
+        </div>
+      </article>
+    </section>
 
-        .main-content {
-          margin-left: 0;
-          padding: 30px 20px;
-        }
+    <section class="pixel-panel experience" style="margin-top:16px;">
+      <h2 class="section-title">EXPERIENCE</h2>
+      <p style="margin:0;">
+        🛠 Under construction.
+      </p>
+    </section>
 
-        .nav-tabs {
-          flex-direction: row;
-          justify-content: center;
-          gap: 10px;
-          margin-top: 20px;
-        }
+    <section class="pixel-panel projects">
+      <h2 class="section-title">PROJECTS</h2>
 
-        .cards {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- ============================================================
-       SIDEBAR: Profile + Navigation
-       ============================================================ -->
-    <div class="sidebar">
-      <div class="profile">
-        <img src="your-photo.jpg" class="photo"> 
-        <h1>Your Name</h1>
-        <p>Business Analyst · SQL · Python · Tableau</p>
-      </div>
-
-      <div class="nav-tabs">
-        <button class="tab-button active" onclick="showTab('about')">
-          About Me
-        </button>
-        <button class="tab-button" onclick="showTab('projects')">
-          Projects
-        </button>
-      </div>
-    </div>
-
-    <!-- ============================================================
-       MAIN CONTENT AREA
-       ============================================================ -->
-    <div class="main-content">
-      <!-- ---------- TAB 1: ABOUT ME ---------- -->
-      <div id="about" class="tab-content active">
-        <div class="panel">
-          <h2>About Me</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-head">
+            <div class="project-icon">▥</div>
+            <h3>Auto Dataset Analysis</h3>
+          </div>
           <p>
-            Write a short introduction about yourself here — your background,
-            skills, and what kind of business analytics role you're looking for.
+            Exploratory data analysis, regression modeling and insights on the Auto dataset.
           </p>
+          <!-- replace href with the exact repository URL -->
+          <a class="project-link" href="https://github.com/amani-1110" target="_blank" rel="noopener" aria-label="View Auto Dataset Analysis on GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.2c-3.23.7-3.91-1.37-3.91-1.37-.53-1.35-1.29-1.71-1.29-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.74 0-1.27.45-2.31 1.2-3.12-.12-.29-.52-1.48.11-3.08 0 0 .98-.31 3.16 1.19a10.9 10.9 0 0 1 5.75 0c2.18-1.5 3.15-1.19 3.15-1.19.63 1.6.23 2.79.11 3.08.75.81 1.2 1.85 1.2 3.12 0 4.46-2.72 5.44-5.31 5.73.42.36.79 1.07.79 2.16v3.21c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7z"/></svg>
+            View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <div class="project-icon">◈</div>
+            <h3>Facial Expression Recognition</h3>
+          </div>
+          <p>
+            Neural network model to classify facial expressions using deep learning techniques.
+          </p>
+          <!-- replace href with the exact repository URL -->
+          <a class="project-link" href="https://github.com/amani-1110" target="_blank" rel="noopener" aria-label="View Facial Expression Recognition on GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.2c-3.23.7-3.91-1.37-3.91-1.37-.53-1.35-1.29-1.71-1.29-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.74 0-1.27.45-2.31 1.2-3.12-.12-.29-.52-1.48.11-3.08 0 0 .98-.31 3.16 1.19a10.9 10.9 0 0 1 5.75 0c2.18-1.5 3.15-1.19 3.15-1.19.63 1.6.23 2.79.11 3.08.75.81 1.2 1.85 1.2 3.12 0 4.46-2.72 5.44-5.31 5.73.42.36.79 1.07.79 2.16v3.21c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7z"/></svg>
+            View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <div class="project-icon">▤</div>
+            <h3>Database & Web Development</h3>
+          </div>
+          <p>
+            Volleyball Club database design with SQL and a web interface for data management.
+          </p>
+          <!-- replace href with the exact repository URL -->
+          <a class="project-link" href="https://github.com/amani-1110" target="_blank" rel="noopener" aria-label="View Database and Web Development on GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.2c-3.23.7-3.91-1.37-3.91-1.37-.53-1.35-1.29-1.71-1.29-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.41-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.74 0-1.27.45-2.31 1.2-3.12-.12-.29-.52-1.48.11-3.08 0 0 .98-.31 3.16 1.19a10.9 10.9 0 0 1 5.75 0c2.18-1.5 3.15-1.19 3.15-1.19.63 1.6.23 2.79.11 3.08.75.81 1.2 1.85 1.2 3.12 0 4.46-2.72 5.44-5.31 5.73.42.36.79 1.07.79 2.16v3.21c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7z"/></svg>
+            View on GitHub
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="pixel-panel contact">
+      <h2 class="section-title">CONTACT ME</h2>
+
+      <div class="contact-row">
+        <div class="contact-block">
+          <a class="icon-button" href="https://www.linkedin.com/in/axm1110" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7 0h3.83v2.19h.05C11.91 9.18 13.22 7.5 16.16 7.5 21.27 7.5 22 10.87 22 15.25V24h-4v-7.75c0-1.85-.03-4.23-2.58-4.23-2.58 0-2.97 2.01-2.97 4.1V24h-4V8z"/>
+            </svg>
+          </a>
+        </div>
+
+        
+
+        <div class="contact-block">
+          <a class="icon-button" href="mailto:amanimyriam.maamar@gmail.com" aria-label="Email Amani-Myriam Maamar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.51L12 13 22 6.51V6H2zm20 12V8.86l-9.45 6.14a1 1 0 0 1-1.1 0L2 8.86V18h20z"/>
+            </svg>
+          </a>
         </div>
       </div>
-
-      <!-- ---------- TAB 2: PROJECTS ---------- -->
-      <div id="projects" class="tab-content">
-        <div class="panel">
-          <h2>Projects</h2>
-        </div>
-        <div class="cards">
-          <!-- CARD 1 -->
-          <div class="card">
-            <div class="card-photo">Project Image</div>
-            <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
-            </div>
-          </div>
-
-          <!-- CARD 2 -->
-          <div class="card">
-            <div class="card-photo">Project Image</div>
-            <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
-            </div>
-          </div>
-
-          <!-- CARD 3 -->
-          <div class="card">
-            <div class="card-photo">Project Image</div>
-            <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
-            </div>
-          </div>
-
-          <!-- CARD 4 -->
-          <div class="card">
-            <div class="card-photo">Project Image</div>
-            <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================================================
-       SIMPLE TAB SWITCHING SCRIPT
-       ============================================================ -->
-    <script>
-      function showTab(id) {
-        // hide all tab contents
-        document.querySelectorAll(".tab-content").forEach(function (el) {
-          el.classList.remove("active");
-        });
-        // remove active state from all buttons
-        document.querySelectorAll(".tab-button").forEach(function (btn) {
-          btn.classList.remove("active");
-        });
-        // show the selected tab + highlight the clicked button
-        document.getElementById(id).classList.add("active");
-        event.target.classList.add("active");
-      }
-    </script>
-  </body>
+    </section>
+    <div class="sparkles">˖⊹˖⊹˖⊹˖</div>
+  </main>
+</body>
 </html>
