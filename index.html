@@ -455,6 +455,36 @@
       }
     }
 
+    /* phone turned sideways */
+    @media (max-width: 950px) and (orientation: landscape) {
+
+      body {
+        background: transparent;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100dvh;
+
+        background-image: url("bg1-mobile.png");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
     @media (max-width: 420px){
       body{
         font-size:19px;
