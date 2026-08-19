@@ -67,7 +67,7 @@
     h1{
       margin:0;
       max-width:1200px;
-      font-size:clamp(2.6rem, 6vw, 5.3rem);
+      font-size:clamp(2.1rem, 4.5vw, 4.1rem);
       line-height:1.18;
       letter-spacing:-.045em;
       color:var(--ink);
@@ -100,6 +100,14 @@
       width:100%;            /* centers across available space */
     }
 
+    .ai-disclosure{
+      margin-top:18px;
+      color:#d89100;
+      font-family:"Press Start 2P", monospace;
+      text-align:center;     /* centered */
+      width:100%;            /* centers across available space */
+    }
+
     .top-grid{
       display:grid;
       grid-template-columns:1fr 1fr 1fr;
@@ -109,7 +117,7 @@
 
     .pixel-panel{
       position:relative;
-      background:#0b1426;
+      background:#0b1426c7;
       color:var(--text);
       border:3px solid var(--line);
       box-shadow:var(--shadow);
@@ -518,7 +526,7 @@
 <body>
   <main class="page">
     <section class="hero" aria-labelledby="name">
-      <h1 id="name">AMANI-MYRIAM<br>MAAMAR</h1>
+      <h1 id="name" style="color:#fffefd;">AMANI-MYRIAM<br>MAAMAR</h1>
       <p class="hero-desc">
         <strong>Analytics · AI · Optimization</strong><br><br>
         Analytical problem solver passionate about turning data into insights and building practical,
@@ -675,7 +683,7 @@
       </div>
     </section>
     <div class="sparkles">˖⊹˖⊹˖⊹˖</div>
-    <div class="sparkles">Generated with ChatGPT</div>
+    <div class="ai-disclosure" style="font-size: 0.5rem;">Generated with ChatGPT</div>
   </main>
 </body>
 </html>
